@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xillow Forever — Panel des malus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="crest"><img src="logo.png" alt="" onerror="this.remove()" />X</div>
+      <div>
+        <h1>Xillow <span>Forever</span></h1>
+        <p class="sub">Le panel des malus · WoW Forever</p>
+      </div>
+    </div>
+    <div class="shop" id="shop"><i></i><span>…</span></div>
+    <div class="me" id="me"></div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="balance-card">
+      <div class="label">Ta bourse</div>
+      <div class="balance"><span class="coin"></span><b id="balance">—</b><small>X-Coins</small></div>
+      <div class="ranks" id="ranks"></div>
+    </div>
+    <div class="how">
+      <h2>Gagner des X-Coins</h2>
+      <ul>
+        <li><b>80 points de chaîne</b> → récompense « Xillow Coins » → <b>+80 X-Coins</b></li>
+        <li><b>100 bits</b> → <b>+80 X-Coins</b> (250 bits = 200 X-Coins…)</li>
+        <li><b>1 sub offert</b> → <b>+240 X-Coins</b> et le panel Gifters débloqué</li>
+      </ul>
+      <p class="fine">Les X-Coins arrivent automatiquement sur ton compte Twitch, connecte-toi ici avec le même compte pour les dépenser.</p>
+    </div>
+  </section>
+
+  <section class="live" id="live">
+    <h2>En ce moment sur le stream</h2>
+    <div class="live-list" id="liveList"></div>
+  </section>
+
+  <main class="panels" id="panels"></main>
+
+  <section class="history" id="historyBox" hidden>
+    <h2>Mes derniers achats</h2>
+    <ol id="history"></ol>
+  </section>
+
+  <footer>
+    <p>Chaque malus est vérifié puis lancé automatiquement. Si tu n'y as pas droit (pas follow / pas sub) ou si le malus échoue, tes X-Coins te sont rendus.</p>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="icons.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
